@@ -4,12 +4,12 @@ import http from 'http';
 const app = express();
 const server = http.createServer(app);
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
+app.get('/', (request, response) => {
+    response.send('Hello World');
 });
 
-app.get('/json', (req, res) => {
-    res.json({ 'message' : 'Hello World' });
+app.get('/json', (request, response) => {
+    response.json({ 'message' : 'Hello World' });
 });
 
 server.listen(3000, () => {
